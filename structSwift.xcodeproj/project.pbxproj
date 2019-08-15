@@ -23,6 +23,7 @@
 /* Begin PBXBuildFile section */
 		9A3A2C9B2304ED1B00D00ACF /* LinkListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2C9A2304ED1B00D00ACF /* LinkListNode.swift */; };
 		9A3A2CA02304EDC200D00ACF /* LinkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2C9F2304EDC200D00ACF /* LinkList.swift */; };
+		9A3A2CA22304F0B500D00ACF /* LinkListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2CA12304F0B500D00ACF /* LinkListTests.swift */; };
 		OBJ_22 /* structSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* structSwift.swift */; };
 		OBJ_29 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_40 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* XCTestManifests.swift */; };
@@ -50,6 +51,7 @@
 /* Begin PBXFileReference section */
 		9A3A2C9A2304ED1B00D00ACF /* LinkListNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkListNode.swift; sourceTree = "<group>"; };
 		9A3A2C9F2304EDC200D00ACF /* LinkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkList.swift; sourceTree = "<group>"; };
+		9A3A2CA12304F0B500D00ACF /* LinkListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkListTests.swift; sourceTree = "<group>"; };
 		OBJ_12 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 		OBJ_13 /* structSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = structSwiftTests.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				OBJ_12 /* XCTestManifests.swift */,
 				OBJ_13 /* structSwiftTests.swift */,
+				9A3A2CA12304F0B500D00ACF /* LinkListTests.swift */,
 			);
 			name = structSwiftTests;
 			path = Tests/structSwiftTests;
@@ -245,6 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				9A3A2CA22304F0B500D00ACF /* LinkListTests.swift in Sources */,
 				OBJ_40 /* XCTestManifests.swift in Sources */,
 				OBJ_41 /* structSwiftTests.swift in Sources */,
 			);
