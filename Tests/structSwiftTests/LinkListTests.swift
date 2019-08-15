@@ -33,6 +33,14 @@ class LinkListTests: XCTestCase {
             XCTAssert(list[i] == i)
             XCTAssert(list.node(at: i).value == i)
         }
-        
+    }
+    func testLinkListPrint() {
+        let list = LinkList<Int>()
+        let range = (0...Int.random(in: 0...9)).map{$0}
+        for i in range {
+            list.append(i)
+        }
+        let experect = range.map{$0.description}
+        XCTAssertEqual(experect.description, list.description)
     }
 }

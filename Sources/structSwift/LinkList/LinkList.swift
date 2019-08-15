@@ -33,8 +33,8 @@ public class LinkList<Element> {
         }
         return node!
     }
-
-
+    
+    
     public func append(_ element: Element) {
         let newNode = Node(value: element)
         if let lastNode = last {
@@ -51,5 +51,28 @@ public class LinkList<Element> {
             count += 1
         }
         return count
+    }
+    func insert(_ node:Node, at index:Int) {
+        if 0 == index {
+            node.next = head
+            head = node
+            return
+        }
+    }
+}
+
+extension LinkList:CustomStringConvertible {
+    public var description: String {
+        var array =  [String]()
+        
+        guard var node = head else {return array.description}
+       
+            array.append("\(node.value)")
+        while let next = node.next {
+            node = next
+            array.append("\(node.value)")
+            
+        }
+        return array.description
     }
 }
