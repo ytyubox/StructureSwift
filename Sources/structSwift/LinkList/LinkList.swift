@@ -24,6 +24,17 @@ public class LinkList<Element> {
         }
         return node!.value
     }
+    public func node(at index:Int) -> Node {
+        if 0 == index {return head!}
+        var node = head?.next
+        for _ in 1..<index {
+            node = node?.next
+            if node == nil {break}
+        }
+        return node!
+    }
+
+
     public func append(_ element: Element) {
         let newNode = Node(value: element)
         if let lastNode = last {
@@ -31,5 +42,14 @@ public class LinkList<Element> {
             return
         }
         head = newNode
+    }
+    public var count:Int {
+        guard var node = head else { return 0}
+        var count = 1
+        while let next = node.next {
+            node = next
+            count += 1
+        }
+        return count
     }
 }

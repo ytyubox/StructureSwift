@@ -19,11 +19,20 @@ class LinkListTests: XCTestCase {
         XCTAssert(list.last?.value == 4)
         XCTAssert(list[0] == 3)
     }
-    func testLinkListList() {
+    func testLinkListLast() {
         let list = LinkList<Int>()
         list.append(3)
         XCTAssert(!list.isEmpty)
         XCTAssert(list[0] == 3)
         XCTAssert(list.last?.value == 3)
+    }
+    func testLinkListGetIndex() {
+        let list = LinkList<Int>()
+        for i in 0...9 {
+            list.append(i)
+            XCTAssert(list[i] == i)
+            XCTAssert(list.node(at: i).value == i)
+        }
+        
     }
 }
