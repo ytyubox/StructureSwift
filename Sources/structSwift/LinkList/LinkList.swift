@@ -35,14 +35,6 @@ public class LinkList<Element> {
     }
     
     
-    public func append(_ element: Element) {
-        let newNode = Node(value: element)
-        if let lastNode = last {
-            lastNode.next = newNode
-            return
-        }
-        head = newNode
-    }
     public var count:Int {
         guard var node = head else { return 0}
         var count = 1
@@ -52,25 +44,37 @@ public class LinkList<Element> {
         }
         return count
     }
+    public func append(_ element: Element) {
+        let newNode = Node(value: element)
+        if let lastNode = last {
+            lastNode.next = newNode
+            return
+        }
+        head = newNode
+    }
     func insert(_ node:Node, at index:Int) {
         if 0 == index {
             node.next = head
             head = node
             return
         }
+        let priviouNode = self.node(at: index - 1)
+        let nextNode = priviouNode.next
+        priviouNode.next = node
+        node.next = nextNode
     }
 }
 
 extension LinkList:CustomStringConvertible {
     public var description: String {
-        var array =  [String]()
+        var array =  [Element]()
         
         guard var node = head else {return array.description}
        
-            array.append("\(node.value)")
+            array.append(node.value)
         while let next = node.next {
             node = next
-            array.append("\(node.value)")
+            array.append(node.value)
             
         }
         return array.description

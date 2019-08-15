@@ -40,7 +40,17 @@ class LinkListTests: XCTestCase {
         for i in range {
             list.append(i)
         }
-        let experect = range.map{$0.description}
+        let experect = range.map{$0}
         XCTAssertEqual(experect.description, list.description)
+    }
+    func testLinkListInsertNode() {
+        let list = LinkList<Int>()
+        list.append(0)
+        list.append(1)
+        list.append(3)
+        let node = LinkListNode(value: 2)
+        list.insert(node, at: 2)
+        XCTAssert(list[2] == 2)
+        XCTAssert(list.description == (0...3).map{$0}.description)
     }
 }
